@@ -7,7 +7,7 @@ import (
 	utils "github.com/boxie123/GoBilibiliLogin/bilibili_login_utils"
 )
 
-func Login() (string, string) {
+func Login() (string, string, string) {
 	configFilePath, isExsit := utils.GetSettingFilePath()
 	var cookie string
 	for {
@@ -18,7 +18,7 @@ func Login() (string, string) {
 		if is_login {
 			uname := data.Get("data.uname").String()
 			fmt.Println(uname + "已登录")
-			return cookie, csrf
+			return cookie, csrf, configFilePath
 		}
 		fmt.Println("未登录,或cookie已过期,请扫码登录")
 		fmt.Println("请最大化窗口，以确保二维码完整显示，回车继续")
