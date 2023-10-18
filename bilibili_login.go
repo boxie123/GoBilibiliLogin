@@ -7,6 +7,12 @@ import (
 	utils "github.com/boxie123/GoBilibiliLogin/bilibili_login_utils"
 )
 
+// Login
+//
+//	@Description: 自动登录 Bilibili 账号并储存 cookie 到文件
+//	@return string cookie
+//	@return string csrf
+//	@return string configFilePath 登录信息文件存储路径
 func Login() (string, string, string) {
 	configFilePath, isExsit := utils.GetSettingFilePath()
 	var cookie string
