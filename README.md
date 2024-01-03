@@ -25,4 +25,4 @@ func main() {
 	fmt.Printf("Cookie: %s\ncsrf: %s\ncookie文件存储路径: %s\n", cookie, csrf, configFilePath)
 }
 ```
-可在命令名参数中传入来指定文件名，若不传入则默认`bzcookie.json`
+可在命令行参数中传入来指定文件名，若不传入则默认`bzcookie.json`
